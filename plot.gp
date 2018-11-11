@@ -22,7 +22,7 @@ set terminal pngcairo size 1920,1080
 set view equal xyz
 set view 90,90,3
 do for [ii=startindex:endindex] {
-    set output sprintf("animation/%6d.png",ii)
+    set output sprintf("animation/%06d.png",ii)
     splot  \
     filename using 0:1:2 every ::1::ii w l, '' using 3:4:5 every ::1::ii w l, \
         '' using 6:7:8 every ::1::ii w l, '' using 9:10:11 every ::1::ii w l, '' using 12:13:14 every ::1::ii w l, \
